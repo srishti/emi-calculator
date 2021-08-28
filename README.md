@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [App Demo](#app-demo)
 - [App Screenshots](#app-screenshots)
 - [Highlights](#highlights)
 - [Run Project](#run-project)
@@ -14,6 +15,12 @@
 The application has rich sliders and input text boxes which the users can utilize to provide inputs for loan amount, tenure and rate of interest.
 
 The interest calculated is based on the simple interest.
+
+## App Demo
+
+Click the following link to view the application demo:
+
+[Play with Demo](https://srishti-emi-calculator.netlify.app)
 
 ## App Screenshots
 
