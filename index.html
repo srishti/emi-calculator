@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="emi-calculator">
+      <!-- EMI INPUT section starts -->
+      <section class="emi-inputs-section">
+        <!-- SLIDERS start -->
+        <div class="input-sliders">
+          <div class="input-slider">
+            <div class="slider-info">
+              <span>Loan Amount</span>
+              <input
+                id="principal-input"
+                class="principal-input input"
+                type="text"
+                step="1"
+              />
+            </div>
+            <div>
+              <input
+                id="principal-slider"
+                class="principal-slider slider"
+                type="range"
+                min="0"
+                max="100000000"
+                step="20000"
+              />
+            </div>
+          </div>
+
+          <div class="input-slider">
+            <div class="slider-info">
+              <span>Tenure</span>
+              <input
+                id="tenure-input"
+                class="tenure-input input"
+                type="number"
+                step="1"
+              />
+            </div>
+            <div>
+              <input
+                id="tenure-slider"
+                class="tenure-slider slider"
+                type="range"
+                min="0"
+                max="10"
+                step="1"
+              />
+            </div>
+          </div>
+
+          <div class="input-slider">
+            <div class="slider-info">
+              <span>Interest Rate</span>
+              <input
+                id="interest-rate-input"
+                class="interest-rate-input input"
+                type="number"
+                step="0.1"
+              />
+            </div>
+            <div>
+              <input
+                id="interest-rate-slider"
+                class="interest-rate-slider slider"
+                type="range"
+                min="5"
+                max="15"
+                step="0.1"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDERS end -->
+
+        <!-- EMI result start -->
+        <div class="emi-result">
+          <h2>EMI</h2>
+          <h2 id="emi-value"></h2>
+        </div>
+        <!-- EMI result end -->
+      </section>
+      <!-- EMI INPUT section starts -->
+
+      <!-- CHART section starts -->
+      <section id="emi-chart-section" class="emi-chart-section">
+        <!-- CHART SVG starts -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 60 60"
+          width="60"
+          height="60"
+          class="emi-donut-chart"
+        >
+          <circle
+            id="principal-chart-slice"
+            r="20"
+            cx="30"
+            cy="30"
+            fill="transparent"
+            stroke="#e45603"
+            stroke-dasharray="calc(100 * (2 * 3.14 * 20) / 100) calc(2 * 3.14 * 20)"
+            stroke-width="0.75rem"
+            transform="rotate(-90) translate(-60)"
+          ></circle>
+          <circle
+            id="interest-chart-slice"
+            r="20"
+            cx="30"
+            cy="30"
+            fill="transparent"
+            stroke="#352b4b"
+            stroke-width="0.75rem"
+            transform="rotate(-90) translate(-60)"
+          ></circle>
+        </svg>
+        <!-- CHART SVG ends -->
+
+        <!-- CHART INNER TEXT starts -->
+        <div class="chart-inner-text">
+          <div>Total Amount</div>
+          <h4 id="chart-total-amount"></h4>
+        </div>
+        <!-- CHART INNER TEXT ends -->
+
+        <!-- CHART LEGENDS start -->
+        <div class="chart-legends">
+          <div class="chart-legend">
+            <div>
+              <span class="legend-dot principal-legend-dot"></span>
+              <span>Principal Amount</span>
+            </div>
+            <h4 id="principal-chart-legend"></h4>
+          </div>
+          <div class="chart-legend">
+            <span class="legend-dot interest-legend-dot"></span>
+            <span>Interest Amount</span>
+            <h4 id="interest-chart-legend"></h4>
+          </div>
+        </div>
+        <!-- CHART LEGENDS end -->
+      </section>
+      <!-- CHART section ends -->
+    </main>
+
+    <!-- SCRIPT starts -->
+    <script src="./scripts/index.js" type="module"></script>
+    <!-- SCRIPT ends -->
+  </body>
+</html>

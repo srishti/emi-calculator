@@ -1,0 +1,9 @@
+# General
+.DS_Store
+node_modules/
+
+# Config
+.prettierrc
+
+# VS Code
+.vscode/

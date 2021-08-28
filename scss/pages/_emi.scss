@@ -1,0 +1,134 @@
+.emi-calculator {
+  width: 95%;
+  padding: 1.25rem 1.75rem;
+  max-width: 55rem;
+  margin: 1rem auto;
+  border-radius: $border-radius-curve;
+  box-shadow: $box-shadow-dark;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to("medium") {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.emi-inputs-section {
+  @include respond-to("medium") {
+    width: 50%;
+  }
+}
+
+.input-sliders {
+  margin-bottom: 2rem;
+
+  @include respond-to("medium") {
+    margin-bottom: 4rem;
+  }
+}
+
+.input-slider:not(:last-of-type) {
+  margin-bottom: 2rem;
+
+  @include respond-to("medium") {
+    margin-bottom: 4rem;
+  }
+}
+
+.slider-info,
+.emi-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-info {
+  margin-bottom: 0.75rem;
+}
+
+.principal-input,
+.tenure-input,
+.interest-rate-input {
+  text-align: end;
+  font-size: 1rem;
+  color: $color-secondary;
+  font-weight: bold;
+  border-bottom: 1px solid $color-black;
+}
+
+.principal-input {
+  width: 7rem;
+}
+
+.tenure-input {
+  width: 2rem;
+}
+
+.interest-rate-input {
+  width: 2rem;
+}
+
+.principal-slider {
+  background: linear-gradient(
+    to right,
+    $color-primary 0%,
+    $color-primary 10%,
+    $color-gray-light 10%,
+    $color-gray-light 100%
+  );
+}
+
+.tenure-slider {
+  background: linear-gradient(
+    to right,
+    $color-primary 0%,
+    $color-primary 70%,
+    $color-gray-light 70%,
+    $color-gray-light 100%
+  );
+}
+
+.interest-rate-slider {
+  background: linear-gradient(
+    to right,
+    $color-primary 0%,
+    $color-primary 35%,
+    $color-gray-light 35%,
+    $color-gray-light 100%
+  );
+}
+
+.emi-chart-section {
+  position: relative;
+
+  @include respond-to("medium") {
+    width: 45%;
+  }
+}
+
+.emi-donut-chart {
+  width: 90%;
+  height: 90%;
+  max-width: 25rem;
+  max-height: 25rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.chart-inner-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.principal-legend-dot {
+  background: $color-primary;
+}
+
+.interest-legend-dot {
+  background: $color-secondary;
+}

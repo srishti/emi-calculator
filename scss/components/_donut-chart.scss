@@ -1,0 +1,15 @@
+.chart-legends {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart-legend {
+  text-align: center;
+}
+
+.legend-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  display: inline-block;
+}

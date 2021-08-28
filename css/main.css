@@ -1,0 +1,176 @@
+/* colors */
+/* fonts */
+/* breakpoints */
+/* transition */
+/* border */
+/* box shadow */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */ }
+
+body {
+  font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #222; }
+
+.input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.35rem 0; }
+
+.chart-legends {
+  display: flex;
+  justify-content: space-around; }
+
+.chart-legend {
+  text-align: center; }
+
+.legend-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  display: inline-block; }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.45rem;
+  border-radius: 2rem;
+  -webkit-transition: 1s;
+  transition: all 1s linear; }
+  .slider:hover {
+    opacity: 1; }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #e45603;
+    box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.375rem #e45603;
+    cursor: pointer;
+    position: relative; }
+  .slider::-moz-range-thumb {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #e45603;
+    box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.375rem #e45603;
+    cursor: pointer;
+    position: relative; }
+
+.emi-calculator {
+  width: 95%;
+  padding: 1.25rem 1.75rem;
+  max-width: 55rem;
+  margin: 1rem auto;
+  border-radius: 0.45rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .emi-calculator {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2.5rem 2rem; } }
+
+@media (min-width: 768px) {
+  .emi-inputs-section {
+    width: 50%; } }
+
+.input-sliders {
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .input-sliders {
+      margin-bottom: 4rem; } }
+
+.input-slider:not(:last-of-type) {
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .input-slider:not(:last-of-type) {
+      margin-bottom: 4rem; } }
+
+.slider-info,
+.emi-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.slider-info {
+  margin-bottom: 0.75rem; }
+
+.principal-input,
+.tenure-input,
+.interest-rate-input {
+  text-align: end;
+  font-size: 1rem;
+  color: #352b4b;
+  font-weight: bold;
+  border-bottom: 1px solid #222; }
+
+.principal-input {
+  width: 7rem; }
+
+.tenure-input {
+  width: 2rem; }
+
+.interest-rate-input {
+  width: 2rem; }
+
+.principal-slider {
+  background: linear-gradient(to right, #e45603 0%, #e45603 10%, #ddd 10%, #ddd 100%); }
+
+.tenure-slider {
+  background: linear-gradient(to right, #e45603 0%, #e45603 70%, #ddd 70%, #ddd 100%); }
+
+.interest-rate-slider {
+  background: linear-gradient(to right, #e45603 0%, #e45603 35%, #ddd 35%, #ddd 100%); }
+
+.emi-chart-section {
+  position: relative; }
+  @media (min-width: 768px) {
+    .emi-chart-section {
+      width: 45%; } }
+
+.emi-donut-chart {
+  width: 90%;
+  height: 90%;
+  max-width: 25rem;
+  max-height: 25rem;
+  display: block;
+  margin: 0 auto; }
+
+.chart-inner-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.principal-legend-dot {
+  background: #e45603; }
+
+.interest-legend-dot {
+  background: #352b4b; }
