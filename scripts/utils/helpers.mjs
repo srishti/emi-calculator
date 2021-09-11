@@ -9,35 +9,18 @@ export const getMonthsFromTenure = (tenureInYears) => {
 };
 
 /**
- * Function to get interest payable per month
- * @param principal - principal loan amount
- * @param tenure - time period (in years)
- * @param rate - rate of interest
- * @returns interest payable per month
- */
-export const getInterestPerMonth = (principal, tenure, rate) => {
-  principal = +principal;
-  tenure = +tenure;
-  rate = +rate;
-
-  if (tenure === 0) {
-    return 0;
-  }
-
-  const totalMonthsInTenure = getMonthsFromTenure(tenure);
-  return (principal * rate * 0.01 * tenure) / totalMonthsInTenure;
-};
-
-/**
  * Function to get total interest payable over the given time period
  * @param principal - principal loan amount
  * @param tenure - time period (in years)
  * @param rate - rate of interest
- * @returns interest payable per month
+ * @returns total interest payable along with the principal
  */
 export const getTotalInterest = (principal, tenure, rate) => {
-  const interestPerMonth = getInterestPerMonth(principal, tenure, rate);
-  return interestPerMonth * getMonthsFromTenure(tenure);
+  principal = +principal;
+  tenure = +tenure;
+  rate = +rate;
+
+  return principal * tenure * rate * 0.01;
 };
 
 /**
@@ -56,7 +39,9 @@ export const getEmi = (principal, tenure, rate) => {
     return 0;
   }
 
-  const interestPerMonth = getInterestPerMonth(principal, tenure, rate);
+  const totalInterest = getTotalInterest(principal, tenure, rate);
+  const amount = principal + totalInterest;
+
   const totalMonthsInTenure = getMonthsFromTenure(tenure);
-  return principal / totalMonthsInTenure + interestPerMonth;
+  return amount / totalMonthsInTenure;
 };

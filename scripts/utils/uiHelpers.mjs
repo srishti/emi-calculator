@@ -34,17 +34,6 @@ export const getSliderProgressRange = (min, max, value) => {
 };
 
 /**
- * Function to set multiple attributes on a given DOM element
- * @param element - DOM element on which the attributes are to be attached
- * @param attributesObj - object consisting of attributes in key-value pairs
- */
-export const setMultipleAttributesOnDomElement = (element, attributesObj) => {
-  for (let key in attributesObj) {
-    element.setAttribute(key, attributesObj[key]);
-  }
-};
-
-/**
  * Function to call an event handler with
  * @param event - event to be attached to event handler
  * @param timer - timer attached to debouncing

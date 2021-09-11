@@ -1,5 +1,5 @@
 /* colors */
-export const COLOR_PRIMARY = "#e45603";
+export const COLOR_PRIMARY = "#1d9da7";
 export const COLOR_GRAY_LIGHT = "#ddd";
 
 /* slider defaults */

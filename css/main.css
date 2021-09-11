@@ -22,8 +22,7 @@ ul {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
+  -webkit-appearance: none; }
 
 input[type="number"] {
   -moz-appearance: textfield;
@@ -68,16 +67,16 @@ body {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: #e45603;
-    box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.375rem #e45603;
+    background: #1d9da7;
+    box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.375rem #1d9da7;
     cursor: pointer;
     position: relative; }
   .slider::-moz-range-thumb {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: #e45603;
-    box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.375rem #e45603;
+    background: #1d9da7;
+    box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.375rem #1d9da7;
     cursor: pointer;
     position: relative; }
 
@@ -140,13 +139,13 @@ body {
   width: 2rem; }
 
 .principal-slider {
-  background: linear-gradient(to right, #e45603 0%, #e45603 10%, #ddd 10%, #ddd 100%); }
+  background: linear-gradient(to right, #1d9da7 0%, #1d9da7 10%, #ddd 10%, #ddd 100%); }
 
 .tenure-slider {
-  background: linear-gradient(to right, #e45603 0%, #e45603 70%, #ddd 70%, #ddd 100%); }
+  background: linear-gradient(to right, #1d9da7 0%, #1d9da7 70%, #ddd 70%, #ddd 100%); }
 
 .interest-rate-slider {
-  background: linear-gradient(to right, #e45603 0%, #e45603 35%, #ddd 35%, #ddd 100%); }
+  background: linear-gradient(to right, #1d9da7 0%, #1d9da7 35%, #ddd 35%, #ddd 100%); }
 
 .emi-chart-section {
   position: relative; }
@@ -170,7 +169,7 @@ body {
   text-align: center; }
 
 .principal-legend-dot {
-  background: #e45603; }
+  background: #1d9da7; }
 
 .interest-legend-dot {
   background: #352b4b; }
